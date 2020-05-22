@@ -13,10 +13,10 @@ env = gym.make('Taxi-v3')
 
 state = env.reset()
 for t in range(100):
-    action = env.action_space.sample()
+    action = env.action_space.sample() #Selecting a random action from the action space
     plt.axis('off')
-    state, reward, done, _ = env.step(action)
-    env.render()
+    state, reward, done, _ = env.step(action) # Executing the action
+    env.render() # Rendering environment 
     if done:
         print('Score: ', t+1)
         break
